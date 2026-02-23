@@ -18,6 +18,7 @@ namespace GuessTheWord2
                               "3 - hard");
             string result = Console.ReadLine();
 
+            
             switch (result)
             {
                 case "1":
