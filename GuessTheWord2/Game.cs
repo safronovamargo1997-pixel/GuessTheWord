@@ -17,7 +17,7 @@ namespace GuessTheWord2
 
         public void AddLetter(char letter, bool isGuessed)
         {
-                _usedLetters.Add(letter);
+            _usedLetters.Add(letter);
             if (isGuessed)
                 _guessedLetters.Add(letter);
         }

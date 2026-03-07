@@ -6,8 +6,9 @@ namespace GuessTheWord2
     {
         public static void Main(string[] args)
         {
-            var ui = new ConsoleUI();
-            ui.ShowUsedLetters(new []{'a', 'b', 'c', 'd', 'e', 'f'});
+            var game = new Game(10);
+            game.AddLetter('a', true);
+            
         }
     }
 }
