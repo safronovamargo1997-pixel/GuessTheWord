@@ -31,6 +31,6 @@ namespace GuessTheWord2
             var random = new Random();
             var index = random.Next(words.Length);
             return words[index];
-        }
+        } 
     }
 }
