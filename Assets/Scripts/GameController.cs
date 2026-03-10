@@ -27,6 +27,7 @@ public class GameController : MonoBehaviour
         //OnDifficultySelected
         //на событие DifficultySelected
     }
+    
     private void OnDisable()
     {
         _gameUI.DifficultySelected -= OnDifficultySelected; // отписка
@@ -80,11 +81,13 @@ public class GameController : MonoBehaviour
         string mask = _guessWord.GetMask(_letterAnalyzer.UsedLetters.ToArray());
         _gameUI.ShowGuessWord(mask);
     }
+    
     private bool CheckWin() //победа, если не осталось звездочек
     {
         string mask = _guessWord.GetMask(_letterAnalyzer.UsedLetters.ToArray());
         return !mask.Contains('*'); 
     }
+    
     private void GameOver(bool isWin)
     {
         _resultGame.enabled = true;
@@ -94,5 +97,4 @@ public class GameController : MonoBehaviour
             _resultGame.text = "You lose! Word: " + _guessWord;
 
     }
-    
 }

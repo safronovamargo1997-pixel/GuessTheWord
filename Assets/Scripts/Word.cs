@@ -11,10 +11,12 @@ public class Word
      {
           _value = value.ToUpper();
      }
+     
      public bool Contains(char letter)
      {
           return _value.Contains(char.ToUpper(letter)); //возвращает содержимое значения
      }
+     
      public string GetMask(char[] guessLetters)
      {
           var upperGuess = guessLetters.Select(char.ToUpper).ToArray();

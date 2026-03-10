@@ -22,9 +22,7 @@ public class GameUIView : MonoBehaviour
     private char _letter; //приватная переменная типа char с именем _letter
     private bool _isDifficultySelected = false;
     
-    public event Action <char> LetterEntered; //приватное событие,
-    //ничего не возвращает,
-    //тип данных char
+    public event Action <char> LetterEntered; 
     public event Action <DifficultyType> DifficultySelected;
 
     private void Start()
@@ -32,6 +30,7 @@ public class GameUIView : MonoBehaviour
         _enterButton.interactable = false;
         _inputLetter.interactable = false;
     }
+    
     private void OnEnable()
     {
         _inputLetter.onValueChanged.AddListener(OnLetterInput);
@@ -87,7 +86,6 @@ public class GameUIView : MonoBehaviour
         
         return char.IsLetter(letter[0]);
     }
-
     
     private void OnEnterClick() //метод для действий после начатия Enter
     {
@@ -99,6 +97,7 @@ public class GameUIView : MonoBehaviour
         
         _inputLetter.Select(); //возвращаемся в поле ввода
     }
+    
     private void OnDifficultyClick(DifficultyType difficulty) //метод для выбора уровня сложности
     {
         _isDifficultySelected = true;
